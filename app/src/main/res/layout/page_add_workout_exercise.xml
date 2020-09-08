@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/exerciseNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ćwiczenie"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/exerciseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="textMultiLine"
+        android:hint="Wpisz nazwę ćwiczenia"
+        android:textColorHint="@color/ltGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/exerciseNameLabel"
+        app:layout_constraintTop_toBottomOf="@id/exerciseNameLabel" />
+
+    <TextView
+        android:id="@+id/repeatCountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Liczba powtórzeń"
+        android:layout_margin="8dp"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/repeatCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="powtórzenia"
+        android:textColorHint="@color/ltGray"
+        app:layout_constraintEnd_toStartOf="@id/half"
+        app:layout_constraintStart_toStartOf="@id/repeatCountLabel"
+        app:layout_constraintTop_toBottomOf="@id/repeatCountLabel" />
+
+
+    <TextView
+        android:id="@+id/seriesCountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Liczba serii"
+        android:layout_margin="8dp"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/half"/>
+
+    <EditText
+        android:id="@+id/seriesCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="serie"
+        android:text="1"
+        android:textColorHint="@color/ltGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/seriesCountLabel"
+        app:layout_constraintTop_toBottomOf="@id/seriesCountLabel" />
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:text="Ciężar"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeatCount" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="ciężar"
+        android:textColorHint="@color/ltGray"
+        app:layout_constraintEnd_toStartOf="@id/weightMetric"
+        app:layout_constraintStart_toStartOf="@id/weightLabel"
+        app:layout_constraintTop_toBottomOf="@id/weightLabel" />
+
+    <TextView
+        android:id="@+id/weightMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toTopOf="@id/weight"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toEndOf="@id/weight"/>
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Czas ćwiczenia"
+        android:layout_margin="8dp"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/repeatCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/half"/>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="czas ćwiczenia"
+        android:textColorHint="@color/ltGray"
+        app:layout_constraintEnd_toStartOf="@id/timeMetric"
+        app:layout_constraintStart_toStartOf="@id/timeLabel"
+        app:layout_constraintTop_toBottomOf="@id/timeLabel" />
+
+    <TextView
+        android:id="@+id/timeMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="min"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        app:layout_constraintTop_toTopOf="@id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time"/>
+
+    <Button
+        android:id="@+id/addWorkoutExercise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dodaj ćwiczenie do treningu"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:background="@drawable/all_rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

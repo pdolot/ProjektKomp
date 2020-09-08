@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:background="@drawable/all_rounded_background"
+    android:backgroundTint="#4C1A1A1A">
+
+    <TextView
+        android:id="@+id/mealName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        tools:text="Posiłek"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/remove"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_add"
+        android:layout_margin="16dp"
+        android:rotation="45"
+        android:tint="#F44336"/>
+
+    <TextView
+        android:id="@+id/energyLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Wartość energetyczna"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        app:layout_constraintTop_toBottomOf="@id/mealName"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/energyThumb"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:tint="#03A9F4"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/energy"
+        app:layout_constraintBottom_toBottomOf="@id/energy"
+        app:layout_constraintStart_toStartOf="@id/energyLabel"/>
+
+    <TextView
+        android:id="@+id/energy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="200 kcal"
+        app:layout_constraintEnd_toEndOf="@id/energyLabel"
+        app:layout_constraintStart_toEndOf="@id/energyThumb"
+        app:layout_constraintTop_toBottomOf="@id/energyLabel" />
+
+
+    <TextView
+        android:id="@+id/proteinsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Białko"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        app:layout_constraintTop_toBottomOf="@id/mealName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/half"/>
+
+    <ImageView
+        android:id="@+id/proteinsThumb"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:tint="#4CAF50"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/proteins"
+        app:layout_constraintBottom_toBottomOf="@id/proteins"
+        app:layout_constraintStart_toStartOf="@id/proteinsLabel"/>
+
+    <TextView
+        android:id="@+id/proteins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="90 g"
+        app:layout_constraintEnd_toEndOf="@id/proteinsLabel"
+        app:layout_constraintStart_toEndOf="@id/proteinsThumb"
+        app:layout_constraintTop_toBottomOf="@id/proteinsLabel" />
+
+    <TextView
+        android:id="@+id/fatsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="Tłuszcze"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/energy" />
+
+    <ImageView
+        android:id="@+id/fatsThumb"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:tint="#FFC107"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/fats"
+        app:layout_constraintBottom_toBottomOf="@id/fats"
+        app:layout_constraintStart_toStartOf="@id/fatsLabel"/>
+
+    <TextView
+        android:id="@+id/fats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="90 g"
+        app:layout_constraintEnd_toEndOf="@id/fatsLabel"
+        app:layout_constraintStart_toEndOf="@id/fatsThumb"
+        app:layout_constraintTop_toBottomOf="@id/fatsLabel"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/carbohydratesLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Węglowodany"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        app:layout_constraintTop_toBottomOf="@id/energy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/half"/>
+
+    <ImageView
+        android:id="@+id/carbohydratesThumb"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:tint="#673AB7"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/carbohydrates"
+        app:layout_constraintBottom_toBottomOf="@id/carbohydrates"
+        app:layout_constraintStart_toStartOf="@id/carbohydratesLabel"/>
+
+    <TextView
+        android:id="@+id/carbohydrates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="86 g"
+        app:layout_constraintEnd_toEndOf="@id/carbohydratesLabel"
+        app:layout_constraintStart_toEndOf="@id/carbohydratesThumb"
+        app:layout_constraintTop_toBottomOf="@id/carbohydratesLabel" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

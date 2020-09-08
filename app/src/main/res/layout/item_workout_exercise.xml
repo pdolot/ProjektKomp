@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:background="@drawable/all_rounded_background"
+    android:backgroundTint="#4C1A1A1A"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/hind_vadodara_medium"
+        tools:text="Wyciskanie sztangi"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/remove"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_add"
+        android:rotation="45"
+        android:tint="#F44336"/>
+
+    <CheckBox
+        android:id="@+id/status"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repeatCountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Liczba powtórzeń"
+        android:layout_marginTop="8dp"
+
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <TextView
+        android:id="@+id/repeatCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="3"
+        app:layout_constraintEnd_toEndOf="@id/repeatCountLabel"
+        app:layout_constraintStart_toStartOf="@id/repeatCountLabel"
+        app:layout_constraintTop_toBottomOf="@id/repeatCountLabel" />
+
+
+    <TextView
+        android:id="@+id/loadLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Obciążenie"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/half"/>
+    
+    <TextView
+        android:id="@+id/load"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="90 kg"
+        app:layout_constraintEnd_toEndOf="@id/loadLabel"
+        app:layout_constraintStart_toStartOf="@id/loadLabel"
+        app:layout_constraintTop_toBottomOf="@id/loadLabel" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="Czas ćwiczenia"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/half"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeatCount" />
+    
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_light"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="5 min"
+        app:layout_constraintEnd_toEndOf="@id/timeLabel"
+        app:layout_constraintStart_toStartOf="@id/timeLabel"
+        app:layout_constraintTop_toBottomOf="@id/timeLabel" />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

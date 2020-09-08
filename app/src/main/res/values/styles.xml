@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/positiveColor</item>
+        <item name="android:statusBarColor">@color/topBarColor</item>
+        <item name="md_color_title">@color/backgroundColor</item>
+        <item name="md_color_content">@color/backgroundColor</item>
+        <item name="md_color_button_text">@color/positiveColor</item>
+        <item name="md_font_title">@font/hind_vadodara_semi_bold</item>
+        <item name="md_font_body">@font/hind_vadodara_regular</item>
+        <item name="md_font_button">@font/hind_vadodara_semi_bold</item>
+    </style>
+
+    <style name="BottomSheet" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackground">#00FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+</resources>

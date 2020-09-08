@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="indicator">16dp</dimen>
+    <dimen name="errorSessionTextSize">24sp</dimen>
+    <dimen name="topBarHeight">60dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="topBarColor">#1A1A1A</color>
+    <color name="backgroundColor">#272727</color>
+    <color name="eventColor">#FBC02D</color>
+    <color name="positiveColor">#388E3C</color>
+    <color name="negativeColor">#F44336</color>
+
+    <color name="itemMenuColor">#1A1A1A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ltGray">#B1B1B1</color>
+</resources>

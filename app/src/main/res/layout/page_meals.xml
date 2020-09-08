@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".view.activity.MainActivity"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Dzienne kalorie" />
+
+    <TextView
+        android:id="@+id/currentCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/maxCalories"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        tools:text="0/" />
+
+    <EditText
+        android:id="@+id/maxCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/metric"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/currentCalories"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        android:text="2000" />
+
+    <TextView
+        android:id="@+id/metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="kcal"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/maxCalories"
+        app:layout_constraintTop_toBottomOf="@id/label" />
+
+    <TextView
+        android:id="@+id/proteinsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/fatsLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maxCalories"
+        android:text="Białko" />
+
+    <TextView
+        android:id="@+id/currentProteins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/maxProteins"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/proteinsLabel"
+        app:layout_constraintTop_toBottomOf="@id/proteinsLabel"
+        tools:text="0/" />
+
+    <EditText
+        android:id="@+id/maxProteins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/proteinsMetric"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/currentProteins"
+        app:layout_constraintTop_toBottomOf="@id/proteinsLabel"
+        android:text="75" />
+
+    <TextView
+        android:id="@+id/proteinsMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="g"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/proteinsLabel"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/maxProteins"
+        app:layout_constraintTop_toBottomOf="@id/proteinsLabel" />
+
+    <TextView
+        android:id="@+id/fatsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/carbohydratesLabel"
+        app:layout_constraintStart_toEndOf="@id/proteinsLabel"
+        app:layout_constraintTop_toBottomOf="@id/maxCalories"
+        android:text="Tłuszcze" />
+
+    <TextView
+        android:id="@+id/currentFats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/maxFats"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/fatsLabel"
+        app:layout_constraintTop_toBottomOf="@id/fatsLabel"
+        tools:text="0/" />
+
+    <EditText
+        android:id="@+id/maxFats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/fatsMetric"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/currentFats"
+        app:layout_constraintTop_toBottomOf="@id/fatsLabel"
+        android:text="150" />
+
+    <TextView
+        android:id="@+id/fatsMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="g"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/fatsLabel"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/maxFats"
+        app:layout_constraintTop_toBottomOf="@id/fatsLabel" />
+
+    <TextView
+        android:id="@+id/carbohydratesLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fatsLabel"
+        app:layout_constraintTop_toBottomOf="@id/maxCalories"
+        android:text="Węglowodany" />
+
+    <TextView
+        android:id="@+id/currentCarbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/maxCarbohydrates"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/carbohydratesLabel"
+        app:layout_constraintTop_toBottomOf="@id/carbohydratesLabel"
+        tools:text="0/" />
+
+    <EditText
+        android:id="@+id/maxCarbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/carbohydratesMetric"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/currentCarbohydrates"
+        app:layout_constraintTop_toBottomOf="@id/carbohydratesLabel"
+        android:text="275" />
+
+    <TextView
+        android:id="@+id/carbohydratesMetric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:text="g"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/carbohydratesLabel"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/maxCarbohydrates"
+        app:layout_constraintTop_toBottomOf="@id/carbohydratesLabel" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_meal"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/maxProteins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/white"
+        app:maxImageSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

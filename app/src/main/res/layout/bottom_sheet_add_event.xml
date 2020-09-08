@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheet_rounded_background">
+
+    <TextView
+        android:id="@+id/eventLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:text="Nazwa wydarzenia"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/eventDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eventDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        tools:text="05.09.2020"
+        android:textColor="@color/eventColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:fontFamily="@font/hind_vadodara_regular"
+        android:hint="Wpisz nazwę wydarzenia"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ltGray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/eventLabel"
+        app:layout_constraintTop_toBottomOf="@id/eventLabel" />
+
+    <Button
+        android:id="@+id/addEvent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dodaj wydarzenie"
+        android:fontFamily="@font/hind_vadodara_semi_bold"
+        android:textColor="@color/white"
+        android:background="@drawable/all_rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_margin="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

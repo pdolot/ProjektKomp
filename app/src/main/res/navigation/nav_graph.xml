@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/page_home">
+
+    <fragment
+        android:id="@+id/page_home"
+        android:name="com.example.myapplication.view.page.home.Home"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/page_meals"
+        android:name="com.example.myapplication.view.page.meals.MealsPage"
+        android:label="MealsPage" />
+    <fragment
+        android:id="@+id/page_organizer"
+        android:name="com.example.myapplication.view.page.organizer.OrganizerPage"
+        android:label="OrganizerPage" />
+    <fragment
+        android:id="@+id/page_report"
+        android:name="com.example.myapplication.view.page.report.ReportPage"
+        android:label="ReportPage" />
+    <fragment
+        android:id="@+id/page_training"
+        android:name="com.example.myapplication.view.page.training.TrainingPage"
+        android:label="TrainingPage" />
+    <fragment
+        android:id="@+id/page_calendar"
+        android:name="com.example.myapplication.view.page.organizer.calendar.CalendarPage"
+        android:label="CalendarPage" />
+    <fragment
+        android:id="@+id/page_add_meal"
+        android:name="com.example.myapplication.view.page.meals.AddMealPage"
+        android:label="AddMealPage">
+        <action
+            android:id="@+id/toMealsList"
+            app:destination="@id/page_add_meal_from_list"
+            app:popUpTo="@id/page_meals" />
+    </fragment>
+    <fragment
+        android:id="@+id/page_add_note"
+        android:name="com.example.myapplication.view.page.organizer.note.AddNotePage"
+        android:label="AddNotePage" />
+    <fragment
+        android:id="@+id/page_notes"
+        android:name="com.example.myapplication.view.page.organizer.note.NotePage"
+        android:label="NotePage" />
+    <fragment
+        android:id="@+id/page_pomodoro"
+        android:name="com.example.myapplication.view.page.organizer.pomodoro.PomodoroPage"
+        android:label="PomodoroPage" >
+        <action
+            android:id="@+id/action_page_pomodoro_to_page_pomodoro_active"
+            app:destination="@id/page_pomodoro_active"
+            app:popUpTo="@id/page_organizer" />
+    </fragment>
+    <fragment
+        android:id="@+id/page_pomodoro_active"
+        android:name="com.example.myapplication.view.page.organizer.pomodoro.PomodoroActive"
+        android:label="PomodoroActive" />
+    <fragment
+        android:id="@+id/page_add_exercise"
+        android:name="com.example.myapplication.view.page.training.exercise.AddExercisePage"
+        android:label="AddExercisePage" />
+    <fragment
+        android:id="@+id/page_exercises"
+        android:name="com.example.myapplication.view.page.training.exercise.ExercisesPage"
+        android:label="ExercisesPage" />
+    <fragment
+        android:id="@+id/page_new_training"
+        android:name="com.example.myapplication.view.page.training.newTraining.PageNewTraining"
+        android:label="PageNewTraining" >
+    </fragment>
+    <fragment
+        android:id="@+id/page_add_exercise_to_new_raining"
+        android:name="com.example.myapplication.view.page.training.newTraining.AddExerciseToNewTrainingPage"
+        android:label="AddExerciseToNewTrainingPage" >
+        <argument
+            android:name="parentId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/page_trainings"
+        android:name="com.example.myapplication.view.page.training.trainings.TrainingsPage"
+        android:label="PageTrainings" />
+    <fragment
+        android:id="@+id/page_start_training_page"
+        android:name="com.example.myapplication.view.page.training.trainings.StartTrainingPage"
+        android:label="StartTrainingPage" />
+    <fragment
+        android:id="@+id/page_add_meal_from_list"
+        android:name="com.example.myapplication.view.page.meals.AddMealFromList"
+        android:label="AddMealFromList" />
+</navigation>
